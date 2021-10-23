@@ -18,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
             delay(3000L)
         }.invokeOnCompletion {
             HomeActivity.start(this)
+            finish()
         }
     }
 }
