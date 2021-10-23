@@ -1,4 +1,4 @@
-package com.audronf.dndcompanion.ui
+package com.audronf.dndcompanion.ui.spells
 
 import android.os.Bundle
 import android.view.LayoutInflater

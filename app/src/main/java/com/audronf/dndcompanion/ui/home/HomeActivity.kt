@@ -6,7 +6,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.audronf.dndcompanion.R
-import com.audronf.dndcompanion.ui.SpellsFragment
+import com.audronf.dndcompanion.ui.combat.CombatFragment
+import com.audronf.dndcompanion.ui.inventory.InventoryFragment
+import com.audronf.dndcompanion.ui.notes.NotesFragment
+import com.audronf.dndcompanion.ui.spells.SpellsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity: AppCompatActivity() {
@@ -30,6 +33,15 @@ class HomeActivity: AppCompatActivity() {
                 }
                 R.id.my_spells_item -> {
                     selectedFragment = SpellsFragment.newInstance()
+                }
+                R.id.combat_item -> {
+                    selectedFragment = CombatFragment.newInstance()
+                }
+                R.id.inventory_item -> {
+                    selectedFragment = InventoryFragment.newInstance()
+                }
+                R.id.notes_item -> {
+                    selectedFragment = NotesFragment.newInstance()
                 }
             }
             replaceFragment(selectedFragment)
