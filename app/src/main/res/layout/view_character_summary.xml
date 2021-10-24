@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/informationCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#f0e8b6"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/regular_spacing"
+            android:paddingVertical="@dimen/short_spacing">
+
+            <ImageView
+                android:id="@+id/characterImage"
+                android:layout_width="@dimen/character_image_dimen"
+                android:layout_height="@dimen/character_image_dimen"
+                android:src="@drawable/img_character_sample"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/characterName" />
+
+            <TextView
+                android:id="@+id/characterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Audronf"
+                android:textColor="#66613e"
+                android:textSize="@dimen/medium_font_size"
+                app:layout_constraintEnd_toEndOf="@id/characterImage"
+                app:layout_constraintStart_toStartOf="@id/characterImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/characterBasics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_spacing"
+                android:text="Level 3 Elf Priest"
+                android:textColor="#66613e"
+                android:textSize="@dimen/regular_spacing"
+                app:layout_constraintStart_toEndOf="@id/characterImage"
+                app:layout_constraintTop_toTopOf="@id/characterImage" />
+
+            <LinearLayout
+                android:id="@+id/hitPointsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/short_spacing"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@id/characterBasics"
+                app:layout_constraintTop_toBottomOf="@id/characterBasics">
+
+                <ImageView
+                    android:layout_width="@dimen/medium_spacing"
+                    android:layout_height="@dimen/medium_spacing"
+                    android:layout_marginEnd="@dimen/short_spacing"
+                    android:src="@drawable/ic_heart" />
+
+                <TextView
+                    android:id="@+id/heart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24/32"
+                    android:textColor="#66613e"
+                    android:textSize="@dimen/regular_font_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/characterBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/short_spacing"
+                android:text="Folk Hero"
+                android:textColor="#66613e"
+                android:textSize="@dimen/regular_font_size"
+                app:layout_constraintStart_toStartOf="@id/hitPointsContainer"
+                app:layout_constraintTop_toBottomOf="@id/hitPointsContainer" />
+
+            <TextView
+                android:id="@+id/characterAlignment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/short_spacing"
+                android:text="Lawful Neutral"
+                android:textColor="#66613e"
+                android:textSize="@dimen/regular_font_size"
+                app:layout_constraintStart_toStartOf="@id/characterBackground"
+                app:layout_constraintTop_toBottomOf="@id/characterBackground" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
