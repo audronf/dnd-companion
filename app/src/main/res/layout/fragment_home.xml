@@ -1,13 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
-    <com.audronf.dndcompanion.ui.customviews.CharacterSummary
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/homeContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/short_spacing">
+
+            <com.audronf.dndcompanion.ui.customviews.CharacterSummary
+                android:id="@+id/characterSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.audronf.dndcompanion.ui.customviews.AbilityScore
+                android:id="@+id/strength"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/regular_spacing"
+                app:layout_constraintEnd_toStartOf="@id/dexterity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/characterSummary" />
+
+            <com.audronf.dndcompanion.ui.customviews.AbilityScore
+                android:id="@+id/dexterity"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/regular_spacing"
+                app:layout_constraintEnd_toStartOf="@id/constitution"
+                app:layout_constraintStart_toEndOf="@id/strength"
+                app:layout_constraintTop_toTopOf="@id/strength" />
+
+            <com.audronf.dndcompanion.ui.customviews.AbilityScore
+                android:id="@+id/constitution"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dexterity"
+                app:layout_constraintTop_toTopOf="@id/strength" />
+
+            <com.audronf.dndcompanion.ui.customviews.AbilityScore
+                android:id="@+id/intelligence"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/short_spacing"
+                app:layout_constraintStart_toStartOf="@id/strength"
+                app:layout_constraintTop_toBottomOf="@id/strength" />
+
+            <com.audronf.dndcompanion.ui.customviews.AbilityScore
+                android:id="@+id/wisdom"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/dexterity"
+                app:layout_constraintTop_toTopOf="@id/intelligence" />
+
+            <com.audronf.dndcompanion.ui.customviews.AbilityScore
+                android:id="@+id/charisma"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/constitution"
+                app:layout_constraintTop_toTopOf="@id/intelligence" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
