@@ -9,4 +9,18 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- Abilities -->
+    <string name="strength">Strength</string>
+    <string name="strength_abbreviation">STR</string>
+    <string name="dexterity">Dexterity</string>
+    <string name="dexterity_abbreviation">DEX</string>
+    <string name="constitution">Constitution</string>
+    <string name="constitution_abbreviation">CON</string>
+    <string name="intelligence">Intelligence</string>
+    <string name="intelligence_abbreviation">INT</string>
+    <string name="wisdom">Wisdom</string>
+    <string name="wisdom_abbreviation">WIS</string>
+    <string name="charisma">Charisma</string>
+    <string name="charisma_abbreviation">CHA</string>
 </resources>
