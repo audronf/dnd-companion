@@ -2,14 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="108dp"
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardElevation="2dp"
+        app:cardElevation="5dp"
         app:strokeColor="@color/kilamanjaro_brown"
         app:strokeWidth="1dp"
         app:cardCornerRadius="10dp"
