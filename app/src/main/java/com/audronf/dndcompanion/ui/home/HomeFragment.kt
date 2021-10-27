@@ -29,27 +29,27 @@ class HomeFragment: Fragment() {
     private fun initAbilityScores() {
         with(binding) {
             strength.apply {
-                setAbilityName(getString(R.string.strength))
+                setAbilityName(getString(R.string.strength_abbreviation))
                 setAbilityScore("2")
             }
             dexterity.apply {
-                setAbilityName(getString(R.string.dexterity))
+                setAbilityName(getString(R.string.dexterity_abbreviation))
                 setAbilityScore("2")
             }
             constitution.apply {
-                setAbilityName(getString(R.string.constitution))
+                setAbilityName(getString(R.string.constitution_abbreviation))
                 setAbilityScore("4")
             }
             intelligence.apply {
-                setAbilityName(getString(R.string.intelligence))
+                setAbilityName(getString(R.string.intelligence_abbreviation))
                 setAbilityScore("1")
             }
             wisdom.apply {
-                setAbilityName(getString(R.string.wisdom))
+                setAbilityName(getString(R.string.wisdom_abbreviation))
                 setAbilityScore("-2")
             }
             charisma.apply {
-                setAbilityName(getString(R.string.charisma))
+                setAbilityName(getString(R.string.charisma_abbreviation))
                 setAbilityScore("-2")
             }
         }

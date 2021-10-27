@@ -23,4 +23,5 @@
     <string name="wisdom_abbreviation">WIS</string>
     <string name="charisma">Charisma</string>
     <string name="charisma_abbreviation">CHA</string>
+    <string name="saving_throws">Saving Throws</string>
 </resources>
