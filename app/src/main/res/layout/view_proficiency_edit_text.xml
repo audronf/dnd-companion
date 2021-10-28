@@ -16,6 +16,7 @@
             android:id="@+id/isProficient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="12sp"
             android:allowUndo="true" />
 
         <EditText
@@ -25,10 +26,11 @@
             android:inputType="number"
             android:focusable="true"
             android:focusableInTouchMode="true"
+            android:textSize="12sp"
             android:imeOptions="actionDone"
             android:maxLength="2"
-            android:layout_marginStart="@dimen/short_spacing"
             android:background="@color/white"
+            android:layout_marginStart="4dp"
             android:gravity="top"
             android:text="13" />
 

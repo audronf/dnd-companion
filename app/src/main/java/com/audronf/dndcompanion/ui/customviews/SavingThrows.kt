@@ -15,12 +15,12 @@ class SavingThrows @JvmOverloads constructor(
 
     init {
         with(binding) {
-            strST.setSavingThrow(context.getString(R.string.strength_abbreviation))
-            dexST.setSavingThrow(context.getString(R.string.dexterity_abbreviation))
-            conST.setSavingThrow(context.getString(R.string.constitution_abbreviation))
-            intST.setSavingThrow(context.getString(R.string.intelligence_abbreviation))
-            wisST.setSavingThrow(context.getString(R.string.wisdom_abbreviation))
-            chaST.setSavingThrow(context.getString(R.string.charisma_abbreviation))
+            strST.setText(context.getString(R.string.strength_abbreviation))
+            dexST.setText(context.getString(R.string.dexterity_abbreviation))
+            conST.setText(context.getString(R.string.constitution_abbreviation))
+            intST.setText(context.getString(R.string.intelligence_abbreviation))
+            wisST.setText(context.getString(R.string.wisdom_abbreviation))
+            chaST.setText(context.getString(R.string.charisma_abbreviation))
             conST.setIsProficient(true)
         }
     }

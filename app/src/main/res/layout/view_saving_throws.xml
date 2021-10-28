@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:strokeColor="@color/kilamanjaro_brown"
-        app:strokeWidth="1dp"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="5dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/kilamanjaro_brown"
+        app:strokeWidth="1dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,52 +26,53 @@
                 android:layout_height="wrap_content"
                 android:text="@string/saving_throws"
                 android:textSize="@dimen/regular_font_size"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.audronf.dndcompanion.ui.customviews.ProficiencyEditText
                 android:id="@+id/strST"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title" />
 
             <com.audronf.dndcompanion.ui.customviews.ProficiencyEditText
                 android:id="@+id/dexST"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/title"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
 
             <com.audronf.dndcompanion.ui.customviews.ProficiencyEditText
                 android:id="@+id/conST"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/strST"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@id/dexST"
-                app:layout_constraintTop_toTopOf="@id/strST"/>
+                app:layout_constraintStart_toEndOf="@id/strST"
+                app:layout_constraintTop_toTopOf="@id/strST" />
 
             <com.audronf.dndcompanion.ui.customviews.ProficiencyEditText
                 android:id="@+id/intST"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/strST"
                 app:layout_constraintTop_toBottomOf="@+id/strST" />
 
             <com.audronf.dndcompanion.ui.customviews.ProficiencyEditText
                 android:id="@+id/wisST"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:layout_constraintStart_toEndOf="@id/intST"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@id/chaST"
+                app:layout_constraintStart_toEndOf="@id/intST"
                 app:layout_constraintTop_toTopOf="@id/intST" />
 
             <com.audronf.dndcompanion.ui.customviews.ProficiencyEditText
                 android:id="@+id/chaST"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/dexST"
-                app:layout_constraintEnd_toEndOf="parent" />
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dexST" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
