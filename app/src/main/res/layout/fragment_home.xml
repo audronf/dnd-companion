@@ -73,12 +73,20 @@
                 app:layout_constraintTop_toTopOf="@id/intelligence" />
 
             <com.audronf.dndcompanion.ui.customviews.SavingThrows
+                android:id="@+id/savingThrows"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/medium_spacing"
                 app:layout_constraintTop_toBottomOf="@id/charisma"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.audronf.dndcompanion.ui.customviews.Skills
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_spacing"
+                app:layout_constraintTop_toBottomOf="@id/savingThrows" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
