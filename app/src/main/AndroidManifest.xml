@@ -3,6 +3,7 @@
     package="com.audronf.dndcompanion">
 
     <application
+        android:name=".DndCompanionApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
