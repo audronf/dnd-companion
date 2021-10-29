@@ -3,6 +3,7 @@ package com.audronf.dndcompanion.ui.home
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.audronf.dndcompanion.R
@@ -14,46 +15,60 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity: AppCompatActivity() {
 
-    private lateinit var selectedFragment: Fragment
+    private var selectedFragment: Fragment? = null
+    private lateinit var homeFragment: HomeFragment
+    private lateinit var spellsFragment: SpellsFragment
+    private lateinit var combatFragment: CombatFragment
+    private lateinit var inventoryFragment: InventoryFragment
+    private lateinit var notesFragment: NotesFragment
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        selectedFragment = HomeFragment.newInstance()
+        initializeFragments()
         findViewById<BottomNavigationView>(R.id.bottomNavigationMenu).selectedItemId = R.id.home_item
-        replaceFragment(selectedFragment)
+        replaceFragment(homeFragment)
         setListeners()
+    }
+
+    private fun initializeFragments() {
+        homeFragment = HomeFragment.newInstance()
+        spellsFragment = SpellsFragment.newInstance()
+        combatFragment = CombatFragment.newInstance()
+        inventoryFragment = InventoryFragment.newInstance()
+        notesFragment = NotesFragment.newInstance()
     }
 
     private fun setListeners() {
         findViewById<BottomNavigationView>(R.id.bottomNavigationMenu).setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.home_item -> {
-                    selectedFragment = HomeFragment.newInstance()
+                    replaceFragment(homeFragment)
                 }
                 R.id.my_spells_item -> {
-                    selectedFragment = SpellsFragment.newInstance()
+                    replaceFragment(spellsFragment)
                 }
                 R.id.combat_item -> {
-                    selectedFragment = CombatFragment.newInstance()
+                    replaceFragment(combatFragment)
                 }
                 R.id.inventory_item -> {
-                    selectedFragment = InventoryFragment.newInstance()
+                    replaceFragment(inventoryFragment)
                 }
                 R.id.notes_item -> {
-                    selectedFragment = NotesFragment.newInstance()
+                    replaceFragment(notesFragment)
                 }
             }
-            replaceFragment(selectedFragment)
             true
         }
     }
 
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.fragmentContainer, fragment)
-            .commit()
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, fragment)
+                .commit()
+        selectedFragment = fragment
     }
 
     override fun onBackPressed() {
