@@ -45,4 +45,7 @@
     <string name="sleight_of_hand">Sleight of Hand</string>
     <string name="stealth">Stealth</string>
     <string name="survival">Survival</string>
+
+    <!-- Notes -->
+    <string name="notes_title">My notes</string>
 </resources>
