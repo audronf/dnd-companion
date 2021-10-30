@@ -13,12 +13,11 @@ android {
         targetSdk 31
         versionCode 1
         versionName "1.0"
-
+        buildConfigField 'String', 'BASE_URL', "\"https://www.dnd5eapi.co/api/\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-        buildConfigField 'String', "BASE_URL", "https://www.dnd5eapi.co/api/"
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -45,6 +44,7 @@ ext {
     retrofit_version = '2.9.0'
     coroutines_version = '1.4.1'
     koin_version = '3.1.2'
+    http_interceptor_version = '4.9.2'
 }
 
 dependencies {
@@ -56,6 +56,8 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$http_interceptor_version"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
