@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.audronf.dndcompanion.R
 
-class SpellsFragment: Fragment() {
+class SpellsFragment(): Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

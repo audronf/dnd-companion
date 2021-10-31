@@ -45,6 +45,7 @@ ext {
     coroutines_version = '1.4.1'
     koin_version = '3.1.2'
     http_interceptor_version = '4.9.2'
+    room_version = '2.3.0'
 }
 
 dependencies {
@@ -58,6 +59,9 @@ dependencies {
     implementation "io.insert-koin:koin-android:$koin_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$http_interceptor_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

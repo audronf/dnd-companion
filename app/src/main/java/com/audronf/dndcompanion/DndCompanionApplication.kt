@@ -1,6 +1,8 @@
 package com.audronf.dndcompanion
 
 import android.app.Application
+import com.audronf.dndcompanion.di.databaseModule
+import com.audronf.dndcompanion.di.repositoryModule
 import com.audronf.dndcompanion.di.retrofitModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -15,8 +17,11 @@ class DndCompanionApplication: Application() {
         startKoin {
             androidLogger(Level.DEBUG)
             androidContext(this@DndCompanionApplication)
-            modules(retrofitModule)
+            modules(
+                retrofitModule,
+                repositoryModule,
+                databaseModule
+            )
         }
     }
-
 }
