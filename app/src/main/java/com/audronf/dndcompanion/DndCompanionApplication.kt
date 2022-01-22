@@ -4,6 +4,7 @@ import android.app.Application
 import com.audronf.dndcompanion.di.databaseModule
 import com.audronf.dndcompanion.di.repositoryModule
 import com.audronf.dndcompanion.di.retrofitModule
+import com.audronf.dndcompanion.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.KoinApplication
@@ -20,7 +21,8 @@ class DndCompanionApplication: Application() {
             modules(
                 retrofitModule,
                 repositoryModule,
-                databaseModule
+                databaseModule,
+                viewModelModule
             )
         }
     }
