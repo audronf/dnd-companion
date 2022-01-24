@@ -29,7 +29,7 @@ class SpellsViewModel(
             val result = spellsRepository.getSpells("ranger")
             val spellsList = ArrayList<Spell>()
             if (result.isSuccessful) {
-                result.body()!!.spellsOverview.forEach {
+                result.body()!!.spellsOverview.take(15).forEach {
                     it.spellInfo = spellsRepository.getSpell(it.index).body()!!
                     spellsList.add(it.spellInfo)
                 }

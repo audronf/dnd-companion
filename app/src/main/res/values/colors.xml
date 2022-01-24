@@ -8,5 +8,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- Spells -->
+    <color name="cantrip_color">#d3ce99</color>
+    <color name="level_1_spell_color">#afd86f</color>
+    <color name="level_2_spell_color">#79c663</color>
+    <color name="level_3_spell_color">#63c693</color>
+    <color name="level_4_spell_color">#63c6c0</color>
+    <color name="level_5_spell_color">#6390c6</color>
+    <color name="level_6_spell_color">#8563c6</color>
+    <color name="level_7_spell_color">#aa63c6</color>
+    <color name="level_8_spell_color">#c663b7</color>
+    <color name="level_9_spell_color">#c66387</color>
     <color name="kilamanjaro_brown">#241801</color>
 </resources>
