@@ -4,9 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.audronf.dndcompanion.R
+import com.audronf.dndcompanion.ui.DiceActivity
 import com.audronf.dndcompanion.ui.combat.CombatFragment
 import com.audronf.dndcompanion.ui.inventory.InventoryFragment
 import com.audronf.dndcompanion.ui.notes.NotesFragment
@@ -30,6 +34,17 @@ class HomeActivity: AppCompatActivity() {
         findViewById<BottomNavigationView>(R.id.bottomNavigationMenu).selectedItemId = R.id.home_item
         replaceFragment(homeFragment)
         setListeners()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        DiceActivity.start(this)
+        return true
     }
 
     private fun initializeFragments() {

@@ -23,4 +23,6 @@ data class Spell(
     @SerializedName("components") val components: Array<String>,
     @SerializedName("material") val material: String?,
     @SerializedName("ritual") val isRitual: Boolean,
+    @SerializedName("level") val level: Int,
+    @SerializedName("concentration") val requiresConcentration: Boolean
 )

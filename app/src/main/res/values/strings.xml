@@ -46,6 +46,11 @@
     <string name="stealth">Stealth</string>
     <string name="survival">Survival</string>
 
+    <!-- Spells -->
+    <string name="spell_level_text">Level %1s spell</string>
+    <string name="cantrip_text">Cantrip</string>
+    <string name="concentration">Concentration</string>
+
     <!-- Notes -->
     <string name="notes_title">My notes</string>
 </resources>
