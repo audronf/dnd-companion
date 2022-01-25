@@ -14,10 +14,6 @@ class SpellsViewModel(
     private val spellsRepository: SpellsRepository
 ) : BaseViewModel() {
 
-    private val _state = MutableLiveData<SpellResponse>()
-    val state: LiveData<SpellResponse>
-        get() = _state
-
     private val _spells = MutableLiveData<ArrayList<Spell>>()
     val spells: LiveData<ArrayList<Spell>>
         get() = _spells
@@ -33,8 +29,7 @@ class SpellsViewModel(
                     it.spellInfo = spellsRepository.getSpell(it.index).body()!!
                     spellsList.add(it.spellInfo)
                 }
-                _state.value = result.body()!!
-                _spells.value = ArrayList(spellsList.sortedBy { it.level })
+                _spells.value = ArrayList(spellsList.sortedWith(compareBy({ it.level }, { it.name } )))
                 _requestStatus.value = RequestStatus.Finished
             } else {
                 _requestStatus.value = RequestStatus.Failure

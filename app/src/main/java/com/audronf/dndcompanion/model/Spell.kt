@@ -2,16 +2,16 @@ package com.audronf.dndcompanion.model
 
 import com.google.gson.annotations.SerializedName
 
+data class SpellResponse(
+    @SerializedName("count") val count: Int,
+    @SerializedName("results") val spellsOverview: List<SpellOverview>,
+)
+
 data class SpellOverview(
     @SerializedName("index") val index: String,
     @SerializedName("name") val name: String,
     @SerializedName("url") val url: String,
     var spellInfo: Spell
-)
-
-data class SpellResponse(
-    @SerializedName("count") val count: Int,
-    @SerializedName("results") val spellsOverview: List<SpellOverview>,
 )
 
 data class Spell(

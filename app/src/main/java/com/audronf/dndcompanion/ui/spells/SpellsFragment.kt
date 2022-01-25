@@ -51,6 +51,7 @@ class SpellsFragment(): Fragment() {
     private fun loadSpells() {
         spellsViewModel.getSpells()
     }
+
     companion object {
         fun newInstance() = SpellsFragment()
     }

@@ -26,7 +26,6 @@ class HomeActivity: AppCompatActivity() {
     private lateinit var inventoryFragment: InventoryFragment
     private lateinit var notesFragment: NotesFragment
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
